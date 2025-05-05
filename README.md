@@ -3,7 +3,7 @@
 ## Overview
 <table>
   <tr>
-    <td width="50%" style="vertical-align: top;">
+    <td height="50" style="vertical-align: top;">
       <img src="assets/FYP1_Web_Design.png" style="width: 100%; max-width: 300px;" alt="Web Design Mockup">
     </td>
     <td width="50%" style="vertical-align: top;">
