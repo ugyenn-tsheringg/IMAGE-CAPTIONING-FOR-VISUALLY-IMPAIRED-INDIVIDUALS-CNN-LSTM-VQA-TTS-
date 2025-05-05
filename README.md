@@ -2,7 +2,7 @@
 
 ## Overview
 
-<div align="center>
+<div align="center">
   <img src="assets/FYP1_Web_Design.png" alt="Expected Output" height="300">
 </div>
 
