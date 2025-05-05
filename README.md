@@ -9,8 +9,11 @@
   </div>
 
   <div style="flex: 2;">
+    
     <p>
+      
       This project develops a web-based image captioning system to enhance accessibility for visually impaired individuals. By integrating <strong>Convolutional Neural Networks (CNN)</strong> with <strong>Long Short-Term Memory (LSTM)</strong> networks, <strong>Visual Question Answering (VQA)</strong> using the BLIP model, and <strong>Text-to-Speech (TTS)</strong> functionalities, the system generates descriptive captions, answers image-related queries, and converts outputs into audio. It employs <strong>soft attention mechanisms</strong> to improve caption relevance and coherence, and compares feature extractors (<strong>ResNet-101</strong>, <strong>VGGNet16</strong>, <strong>Inception-v3</strong>) to optimize performance. The web interface, built with Flask and modern web technologies, ensures a seamless user experience.
+      
     </p>
     <p>
       This repository showcases the project for internship applications, highlighting expertise in computer vision, natural language processing, and accessibility-focused technologies.
