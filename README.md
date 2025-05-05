@@ -39,11 +39,11 @@ The project is **under active development** and currently in the model training 
   
 **Figure 1** - Architecture of Image Captioning System using CNN and LSTM along with attention mechanism
   <div></div>
-  <img src="assets/FYP1_VQA.png">
+  <img src="assets/FYP1_VQA.png" width="500">
   
 **Figure 2** - Simplified workflow of VQA component from BLIP Model
 <div></div>
-  <img src="assets/tts.png">
+  <img src="assets/tts.png" width="500">
   
 **Figure 3** - Integration of a Text-to-Speech (TTS) system
 
