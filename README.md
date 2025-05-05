@@ -1,6 +1,8 @@
 # Image Captioning Website for Visually Impaired Individuals
 
 ## Overview
+
+<div align="center"> <img src="FYP1_Web_Design.png"></div>
 This project develops a web-based image captioning system to enhance accessibility for visually impaired individuals. By integrating **Convolutional Neural Networks (CNN)** with **Long Short-Term Memory (LSTM)** networks, **Visual Question Answering (VQA)** using the BLIP model, and **Text-to-Speech (TTS)** functionalities, the system generates descriptive captions, answers image-related queries, and converts outputs into audio. It employs **soft attention mechanisms** to improve caption relevance and coherence, and compares feature extractors (**ResNet-101**, **VGGNet16**, **Inception-v3**) to optimize performance. The web interface, built with Flask and modern web technologies, ensures a seamless user experience.
 
 This repository showcases the project for internship applications, highlighting expertise in computer vision, natural language processing, and accessibility-focused technologies.
@@ -25,27 +27,16 @@ The project is **under active development** and currently in the model training 
 - Pre-trained CNN models (ResNet-101, VGGNet16, Inception-v3) are accessed via PyTorch’s `torchvision`.
 - The BLIP model for VQA is loaded using Hugging Face’s Transformers library.
 
-## Usage
-Once implementation is complete, run the application as follows:
-
-### Run the Flask Web Application
-```bash
-python app.py
-```
-This starts a local server at `http://localhost:5000`.
-
-### Interact with the Web Interface
-- Open `http://localhost:5000` in a web browser.
-- Upload an image using the provided button.
-- View generated captions and ask questions via the VQA interface.
-- Play audio outputs for captions and VQA answers using embedded audio player buttons.
-
 ### Training the Model
 - The model is currently being trained on **Google Colab Pro Plus** using the MS COCO dataset.
 - Training scripts (to be added) will cover preprocessing, feature extraction, and decoder training with soft attention.
 
 ## Architecture Diagram
-[To be added: Diagram illustrating the CNN-LSTM architecture with soft attention, VQA integration using BLIP, TTS workflow, and web application structure]
+<div align="center"> 
+  <img src="FYP1_Image_Captioning.png">
+  <img src="FYP1_VQA.png">
+  <img src="tts.png">
+</div>
 
 ## Technical Details
 ### Datasets
