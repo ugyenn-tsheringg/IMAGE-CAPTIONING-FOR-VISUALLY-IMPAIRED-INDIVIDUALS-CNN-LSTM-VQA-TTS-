@@ -90,7 +90,7 @@ The project is **under active development** and currently in the model training 
 This project is in active development for internship applications. Contributions are not actively sought at this stage but may be considered later. To contribute, open an issue on GitHub to discuss proposed changes or contact the repository owner.
 
 ## License
-[To be determined: Likely MIT License upon completion]
+MIT License
 
 ## Contact
 For questions or feedback:
