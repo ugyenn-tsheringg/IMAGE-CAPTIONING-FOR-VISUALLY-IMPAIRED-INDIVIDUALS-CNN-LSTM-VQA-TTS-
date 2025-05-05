@@ -1,16 +1,11 @@
 # Image Captioning Website for Visually Impaired Individuals
 
 ## Overview
-<div style="display: flex; align-items: center; gap: 20px;">
-  <div style="flex: 0 0 auto;">
-    <img src="assets/FYP1_Web_Design.png" style="width: 50%; max-width: 210px;" alt="Web Design Mockup">
-  </div>
-  <div style="flex: 1;">
-    This project develops a web-based image captioning system to enhance accessibility for visually impaired individuals. By integrating <b>Convolutional Neural Networks (CNN)</b> with <b>Long Short-Term Memory (LSTM)</b> networks, <b>Visual Question Answering (VQA)</b> using the BLIP model, and <b>Text-to-Speech (TTS)</b> functionalities, the system generates descriptive captions, answers image-related queries, and converts outputs into audio. It employs <b>soft attention mechanisms</b> to improve caption relevance and coherence, and compares feature extractors (<b>ResNet-101</b>, <b>VGGNet16</b>, <b>Inception-v3</b>) to optimize performance. The web interface, built with Flask and modern web technologies, ensures a seamless user experience.
-    <br><br>
-    This repository showcases the project for internship applications, highlighting expertise in computer vision, natural language processing, and accessibility-focused technologies.
-  </div>
-</div>
+
+This project develops a web-based image captioning system to enhance accessibility for visually impaired individuals. By integrating **Convolutional Neural Networks (CNN)** with **Long Short-Term Memory (LSTM)** networks, **Visual Question Answering (VQA)** using the BLIP model, and **Text-to-Speech (TTS)** functionalities, the system generates descriptive captions, answers image-related queries, and converts outputs into audio. It employs **soft attention mechanisms** to improve caption relevance and coherence, and compares feature extractors (**ResNet-101**, **VGGNet16**, **Inception-v3**) to optimize performance. The web interface, built with Flask and modern web technologies, ensures a seamless user experience.
+
+This repository showcases the project for internship applications, highlighting expertise in computer vision, natural language processing, and accessibility-focused technologies.
+
 
 ## Project Status
 The project is **under active development** and currently in the model training phase using **Google Colab Pro Plus** for high-performance GPU computation. The focus is on implementing the CNN-LSTM architecture, integrating the pre-trained BLIP model for VQA, and setting up TTS with gTTS or pyttsx3. The web application is in early development, with plans to finalize frontend and backend integration. Future steps include evaluating performance using BLEU, CIDEr, and ROUGE metrics and conducting usability testing with visually impaired users.
