@@ -1,78 +1,123 @@
 # Image Captioning Website for Visually Impaired Individuals
 
-## 📝 Overview
-This project develops a **web-based image captioning system** integrated with **Visual Question Answering (VQA)** and **Text-to-Speech (TTS)** functionalities to enhance accessibility for visually impaired users. It leverages **CNN-LSTM architectures with soft attention**, **pre-trained BLIP models** for VQA, and TTS tools like **gTTS** or **pyttsx3**. The system aims to:
+## Overview
+This project develops a web-based image captioning system to enhance accessibility for visually impaired individuals. By integrating **Convolutional Neural Networks (CNN)** with **Long Short-Term Memory (LSTM)** networks, **Visual Question Answering (VQA)** using the BLIP model, and **Text-to-Speech (TTS)** functionalities, the system generates descriptive captions, answers image-related queries, and converts outputs into audio. It employs **soft attention mechanisms** to improve caption relevance and coherence, and compares feature extractors (**ResNet-101**, **VGGNet16**, **Inception-v3**) to optimize performance. The web interface, built with Flask and modern web technologies, ensures a seamless user experience.
 
-- Generate descriptive image captions
-- Answer image-related user questions
-- Convert outputs to audio
-- Offer a user-friendly web interface
+This repository showcases the project for internship applications, highlighting expertise in computer vision, natural language processing, and accessibility-focused technologies.
+
+## Project Status
+The project is **under active development** and currently in the model training phase using **Google Colab Pro Plus** for high-performance GPU computation. The focus is on implementing the CNN-LSTM architecture, integrating the pre-trained BLIP model for VQA, and setting up TTS with gTTS or pyttsx3. The web application is in early development, with plans to finalize frontend and backend integration. Future steps include evaluating performance using BLEU, CIDEr, and ROUGE metrics and conducting usability testing with visually impaired users.
+
+## Features
+- **Image Captioning**: Generates contextually relevant captions using CNN-LSTM with soft attention, comparing ResNet-101, VGGNet16, and Inception-v3.
+- **Visual Question Answering (VQA)**: Enables users to ask image-related questions, powered by the pre-trained BLIP model from Hugging Face.
+- **Text-to-Speech (TTS)**: Converts captions and VQA answers into audio using gTTS or pyttsx3 for accessibility.
+- **Web Interface**: Provides image uploads, caption and VQA answer display, and audio playback using HTML5, CSS, JavaScript, and potentially React/Vue.js.
+- **Performance Evaluation**: Assesses caption quality with BLEU-4, CIDEr, and ROUGE-L metrics, plus qualitative feedback from visually impaired users.
+- **Dataset Utilization**: Uses MS COCO and Flickr30k datasets with preprocessing for image normalization and caption tokenization.
+
+## Installation
+To set up the project locally (once implementation advances), follow these steps:
+
+### Clone the Repository
+```bash
+git clone https://github.com/your-username/image-captioning-website.git
+cd image-captioning-website
+```
+
+### Install Dependencies
+Create a virtual environment and install required packages:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install torch torchvision transformers nltk gTTS flask numpy h5py
+```
+*Note*: Additional dependencies will be added as the project progresses.
+
+### Download Datasets
+- Download the **MS COCO 2017** dataset from the [official repository](https://cocodataset.org/).
+- Optionally, download the **Flickr30k** dataset for supplementary testing.
+- Organize datasets into a `data/` folder with subfolders for training/validation images and annotation files.
+
+### Download Pre-trained Models
+- Pre-trained CNN models (ResNet-101, VGGNet16, Inception-v3) are accessed via PyTorch’s `torchvision`.
+- The BLIP model for VQA is loaded using Hugging Face’s Transformers library.
+
+## Usage
+Once implementation is complete, run the application as follows:
+
+### Run the Flask Web Application
+```bash
+python app.py
+```
+This starts a local server at `http://localhost:5000`.
+
+### Interact with the Web Interface
+- Open `http://localhost:5000` in a web browser.
+- Upload an image using the provided button.
+- View generated captions and ask questions via the VQA interface.
+- Play audio outputs for captions and VQA answers using embedded audio player buttons.
+
+### Training the Model
+- The model is currently being trained on **Google Colab Pro Plus** using the MS COCO dataset.
+- Training scripts (to be added) will cover preprocessing, feature extraction, and decoder training with soft attention.
+
+## Architecture Diagram
+[To be added: Diagram illustrating the CNN-LSTM architecture with soft attention, VQA integration using BLIP, TTS workflow, and web application structure]
+
+## Technical Details
+### Datasets
+- **MS COCO 2017**: Over 120,000 images with five captions each, used for training and evaluation.
+- **Flickr30k**: 31,000 images with five captions, for supplementary testing.
+- Preprocessing: Resize images to 256x256, normalize pixel values, tokenize captions using NLTK.
+
+### Feature Extraction
+- Pre-trained CNNs (ResNet-101, VGGNet16, Inception-v3) extract high-dimensional feature maps.
+- Fully connected layers are removed to output spatial features for attention-based decoding.
+
+### Decoder
+- LSTM-based decoder with soft attention generates captions word by word.
+- Trained with teacher forcing and Cross-Entropy Loss; uses beam search for inference.
+
+### VQA
+- Uses pre-trained BLIP model (`BLIPForQuestionAnswering`) from Hugging Face.
+- Processes images and tokenized questions to generate text-based answers.
+
+### TTS
+- Converts captions and VQA answers to audio using gTTS or pyttsx3.
+- Integrated with the web backend for real-time audio generation.
+
+### Web Application
+- **Frontend**: HTML5, CSS, JavaScript Biblicals for embedded audio player buttons.
+- **Backend**: Flask handles image processing, caption generation, VQA, and TTS.
+- APIs connect frontend and backend for seamless interaction.
+
+### Evaluation Metrics
+- **BLEU-4**: Measures n-gram overlap for caption fluency.
+- **CIDEr**: Evaluates semantic relevance.
+- **ROUGE-L**: Assesses coverage of key information.
+
+### Training Environment
+- Training on **Google Colab Pro Plus** with GPU acceleration.
+- PyTorch for model development; Hugging Face Transformers for VQA.
+
+## Contributing
+This project is in active development for internship applications. Contributions are not actively sought at this stage but may be considered later. To contribute, open an issue on GitHub to discuss proposed changes or contact the repository owner.
+
+## License
+[To be determined: Likely MIT License upon completion]
+
+## Contact
+For questions or feedback:
+- Open an issue on this GitHub repository.
+- Email: [your-email@example.com]
+
+## Acknowledgments
+- **AlBukhary International University**: For academic support and guidance.
+- **MS COCO and Flickr30k Teams**: For open-access datasets.
+- **Hugging Face**: For the BLIP model and Transformers library.
+- **Google Colab Pro Plus**: For computational resources during training.
 
 ---
 
-## ✨ Features
-
-- **Image Captioning**: Generates descriptive captions using CNN-LSTM with soft attention; compares feature extractors like ResNet-101, VGGNet16, and Inception-v3.
-- **Visual Question Answering (VQA)**: Enables users to ask image-related questions powered by the pre-trained **BLIP** model.
-- **Text-to-Speech (TTS)**: Converts captions and VQA answers into audio using **gTTS** or **pyttsx3** for accessibility.
-- **Web Interface**: Upload images, display captions/VQA answers, and play audio. Built using **HTML5**, **CSS**, **JavaScript**, and **Flask**.
-- **Evaluation**: Model performance assessed using **BLEU**, **CIDEr**, and **ROUGE** scores; usability feedback gathered from visually impaired users.
-
----
-
-## 🚧 Project Status
-**Under active development** as part of an internship application.
-
-### Current focus:
-- Implementing the CNN-LSTM captioning model  
-- Integrating VQA (BLIP) and TTS functionality  
-- Building the web application interface  
-
-### Next steps:
-- Performance evaluation  
-- Usability testing with visually impaired users  
-
----
-
-## 🧠 Architecture Diagram
-📌 *To be added:* Diagram illustrating the integration of CNN-LSTM, VQA, and TTS modules.
-
----
-
-## 📊 Datasets
-
-- **MS COCO**: Primary dataset for training and evaluating the image captioning model.
-- **Flickr30k**: Used for additional testing and validation.
-
----
-
-## 💻 Technologies Used
-
-| Category    | Tools/Libraries                                |
-|-------------|------------------------------------------------|
-| **Backend** | Python, PyTorch, Flask, Hugging Face Transformers |
-| **Frontend**| HTML5, CSS, JavaScript *(React/Vue.js planned)* |
-| **TTS**     | gTTS, pyttsx3                                   |
-| **Datasets**| MS COCO, Flickr30k                              |
-| **Evaluation**| BLEU, CIDEr, ROUGE                          |
-
----
-
-## 🤝 Contributing
-This project is in early development. Contributions are welcome once the initial implementation is complete.
-
-📬 **Contact the repository owner** if you're interested in collaborating.
-
----
-
-## 📄 License
-*To be determined*
-
----
-
-## 📬 Contact
-For inquiries, reach out via [GitHub Issues](../../issues) or email: **your-email@example.com**
-
----
-
-> 🔧 *Note: This project is a work in progress. The README will be updated as development continues, including setup instructions, model training steps, and architectural diagrams.*
+*Note*: This project is actively being developed, with training on Google Colab Pro Plus. The README will be updated with milestones, including the architectural diagram, training scripts, and detailed setup instructions.
