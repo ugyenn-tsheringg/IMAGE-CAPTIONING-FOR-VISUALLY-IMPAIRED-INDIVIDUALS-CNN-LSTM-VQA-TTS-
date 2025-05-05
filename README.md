@@ -16,24 +16,6 @@ The project is **under active development** and currently in the model training 
 - **Performance Evaluation**: Assesses caption quality with BLEU-4, CIDEr, and ROUGE-L metrics, plus qualitative feedback from visually impaired users.
 - **Dataset Utilization**: Uses MS COCO and Flickr30k datasets with preprocessing for image normalization and caption tokenization.
 
-## Installation
-To set up the project locally (once implementation advances), follow these steps:
-
-### Clone the Repository
-```bash
-git clone https://github.com/your-username/image-captioning-website.git
-cd image-captioning-website
-```
-
-### Install Dependencies
-Create a virtual environment and install required packages:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install torch torchvision transformers nltk gTTS flask numpy h5py
-```
-*Note*: Additional dependencies will be added as the project progresses.
-
 ### Download Datasets
 - Download the **MS COCO 2017** dataset from the [official repository](https://cocodataset.org/).
 - Optionally, download the **Flickr30k** dataset for supplementary testing.
@@ -110,11 +92,12 @@ This project is in active development for internship applications. Contributions
 ## Contact
 For questions or feedback:
 - Open an issue on this GitHub repository.
-- Email: [your-email@example.com]
+- Email: ugyen.tshering@student.aiu.edu.my
 
 ## Acknowledgments
 - **AlBukhary International University**: For academic support and guidance.
-- **MS COCO and Flickr30k Teams**: For open-access datasets.
+- **Dr. Abu Bakar:** Project Advisor
+- **MS COCO 2017 Teams**: For open-access datasets.
 - **Hugging Face**: For the BLIP model and Transformers library.
 - **Google Colab Pro Plus**: For computational resources during training.
 
