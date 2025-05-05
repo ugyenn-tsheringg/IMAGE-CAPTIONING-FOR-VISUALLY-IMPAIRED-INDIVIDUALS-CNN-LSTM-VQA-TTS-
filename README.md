@@ -3,7 +3,7 @@
 ## Overview
 
 <div align="center">
-  <h1> Expected Outcome<h2>
+  <h4> Expected Outcome<h4>
   <img src="assets/FYP1_Web_Design.png" alt="Expected Output" height="500">
 </div>
 
