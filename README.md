@@ -4,7 +4,6 @@
 <table>
   <tr>
     <td width="50" style="vertical-align: top;">
-      
       <img src="assets/FYP1_Web_Design.png" style="width: 70%; max-width: 210px;" alt="Web Design Mockup">
     </td>
     <td width="50%" style="vertical-align: top;">
